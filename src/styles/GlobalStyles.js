@@ -2,7 +2,18 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
     :root{
-        
+        // Primary
+        --color-blue-400: hsl(180, 66%, 49%);        
+        --color-purple-950: hsl(257, 27%, 26%);
+
+        // Secondary
+        --color-redd-400: hsl(0, 87%, 67%);
+
+        // Neutral
+        --color-gray-400: hsl(0, 0%, 75%);
+        --color-gray-500: hsl(257, 7%, 63%);
+        --color-gray-000: hsl(255, 11%, 22%);
+        --color-gray-950: hsl(260, 8%, 14%);
     }
 
     *, *::before, *::after{
@@ -16,7 +27,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body{
-        /* Weights: 400, 500, 700 */
+        // - Weights: 500, 700
         font-size: 1.8rem;
         font-family: "DM Sans", sans-serif;
         min-height: 100vh;
