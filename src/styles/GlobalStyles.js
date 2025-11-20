@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
         // Neutral
         --color-gray-400: hsl(0, 0%, 75%);
         --color-gray-500: hsl(257, 7%, 63%);
-        --color-gray-000: hsl(255, 11%, 22%);
+        --color-gray-900: hsl(255, 11%, 22%);
         --color-gray-950: hsl(260, 8%, 14%);
     }
 
