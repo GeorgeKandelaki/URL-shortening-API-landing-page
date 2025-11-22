@@ -90,7 +90,11 @@ function URLShortener() {
                     Shorten It!
                 </Button>
             </StyledURLShortener>
-            <Results results={results} isLoading={isLoading} />
+            {!results.length ? (
+                toast.error("Oops! Something went wrong")
+            ) : (
+                <Results results={results} isLoading={isLoading} />
+            )}
         </Container>
     );
 }
