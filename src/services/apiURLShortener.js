@@ -9,6 +9,8 @@ export async function shortenURL(url) {
         const apiUrl = encodeURIComponent(`${URL}?format=simple&url=${url}`);
         const response = await axios(proxy + apiUrl);
 
+        if (!response) return null;
+
         const { data } = response;
 
         return data;

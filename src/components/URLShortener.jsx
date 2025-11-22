@@ -31,7 +31,7 @@ const StyledURLShortener = styled.form`
 
 const StyledInput = styled.input`
     width: 100%;
-    padding: 1.2rem 2.4rem;
+    padding: 1rem 2.4rem;
     border-radius: 0.8rem;
 `;
 
@@ -48,7 +48,7 @@ const Container = styled.div`
 
 function URLShortener() {
     const [url, setUrl] = useState("");
-    const [error, setError] = useState();
+    const [error, setError] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [results, setResults] = useState([]);
 
@@ -63,6 +63,7 @@ function URLShortener() {
 
         try {
             const data = await shortenURL(url);
+            if (!data) return null;
 
             setResults((prevState) => [{ url: url, shortenedUrl: data.contents }, ...prevState]);
             setError("");
@@ -70,6 +71,7 @@ function URLShortener() {
             toast.success("Successfully shortened");
         } catch (err) {
             console.error(err);
+            toast.error("Oops! Something went wrong.");
         } finally {
             setIsLoading(false);
         }
@@ -90,11 +92,8 @@ function URLShortener() {
                     Shorten It!
                 </Button>
             </StyledURLShortener>
-            {!results.length ? (
-                toast.error("Oops! Something went wrong")
-            ) : (
-                <Results results={results} isLoading={isLoading} />
-            )}
+
+            <Results results={results} isLoading={isLoading} />
         </Container>
     );
 }
