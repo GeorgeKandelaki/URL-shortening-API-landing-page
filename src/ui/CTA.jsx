@@ -6,7 +6,7 @@ import imageCTA from "../assets/bg-boost-desktop.svg";
 const StyledCTA = styled.div`
     text-align: center;
     background-color: var(--color-purple-950);
-    background-image: url(${imageCTA});
+    background-image: url("${imageCTA}");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

@@ -10,6 +10,11 @@ const StyledLi = styled.li`
     color: var(--color-gray-500);
     font-weight: 700;
     cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        color: var(--color-gray-950);
+    }
 `;
 
 function Nav() {

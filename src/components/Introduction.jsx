@@ -4,15 +4,16 @@ import introductionImage from "../assets/illustration-working.svg";
 import Button from "../ui/Button";
 
 const StyledIntroduction = styled.div`
+    position: relative;
     margin-top: 6.4rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    padding: 0 12.8rem;
+    padding: 7.2rem 12.8rem;
 `;
 const Image = styled.div`
     width: 100%;
-    transform: translateX(25%);
+    transform: translate(25%, -20%);
 `;
 const Container = styled.div``;
 const Heading = styled.h1`

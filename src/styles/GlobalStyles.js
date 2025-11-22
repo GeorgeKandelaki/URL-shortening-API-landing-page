@@ -7,7 +7,7 @@ const GlobalStyles = createGlobalStyle`
         --color-purple-950: hsl(257, 27%, 26%);
 
         // Secondary
-        --color-redd-400: hsl(0, 87%, 67%);
+        --color-red-400: hsl(0, 87%, 67%);
 
         // Neutral
         --color-gray-400: hsl(0, 0%, 75%);
